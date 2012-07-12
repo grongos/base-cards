@@ -22,7 +22,7 @@ class BaseDeckOperationsTest(TestCase):
         d.add(c) # add the c card to the d deck
 
         with self.assertRaises(DeckError):
-            d.remove(Card()) # card not exists?
+            d.remove(Card()) # card doesnt exist?
 
         d.remove(c) # remove the c card from the d deck
 
@@ -38,7 +38,7 @@ class BaseDeckOperationsTest(TestCase):
         d.add(c) # add the c card to the d deck
 
         with self.assertRaises(DeckError):
-            d.remove_at(42) # card not exists?
+            d.remove_at(42) # card doesnt exist?
         self.assertEqual(c, d.remove_at(0)) # returns the removed card?
         self.assertEqual(0, d.size()) # d deck's size is 0?
         with self.assertRaises(DeckError):
